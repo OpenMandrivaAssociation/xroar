@@ -26,16 +26,16 @@ or ".vdk" files) but has its own snapshot format at the moment (no ".pak" file
 support).
 
 %prep
-
 %setup -q -n %{name}-%{version}
-%configure2_5x
-perl -pi -e "s#share#share/games#g" Makefile
 
 %build
+export LDLIBS="-lm"
+%configure2_5x
+perl -pi -e "s#share#share/games#g" Makefile
 %make
 
 %install
-rm -rf %{buildroot}
+%__rm -rf %{buildroot}
 
 #binary
 %__mkdir_p %{buildroot}%{_gamesbindir}
