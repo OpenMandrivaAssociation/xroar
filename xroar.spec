@@ -13,7 +13,7 @@ BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	jackit-devel
 BuildRequires:	pulseaudio-devel
-BuildRequires:	alsa-lib-devel
+BuildRequires:	pkgconfig(alsa)
 BuildRequires:	sndfile-devel
 BuildRequires:	gtk2-devel
 BuildRequires:	mesagl-devel
