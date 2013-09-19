@@ -1,10 +1,10 @@
-Name:		xroar
-Version:	0.29.5
-Release:	1
 Summary:	Dragon32, Dragon64 and Tandy CoCo emulator
+Name:		xroar
+Version:	0.30
+Release:	1
 License:	GPLv2+
 Group:		Emulators
-URL:		http://www.6809.org.uk/dragon/xroar.shtml
+Url:		http://www.6809.org.uk/dragon/xroar.shtml
 Source0:	http://www.6809.org.uk/dragon/%{name}-%{version}.tar.gz
 Source1:	%{name}-16.png
 Source2:	%{name}-32.png
@@ -25,6 +25,17 @@ It uses standard cassette images (".cas" files) and virtual diskettes (".dsk"
 or ".vdk" files) but has its own snapshot format at the moment (no ".pak" file
 support).
 
+%files
+%doc ChangeLog COPYING* README
+%attr(0755,root,games) %{_gamesbindir}/%{name}
+%dir %attr(0755,root,games) %{_gamesdatadir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
+%{_miconsdir}/%{name}.png
+%{_iconsdir}/%{name}.png
+%{_liconsdir}/%{name}.png
+
+#----------------------------------------------------------------------------
+
 %prep
 %setup -q
 
@@ -37,7 +48,7 @@ perl -pi -e "s#share#share/games#g" Makefile
 %install
 #binary
 mkdir -p %{buildroot}%{_gamesbindir}
-install -m 755 %{name} %{buildroot}%{_gamesbindir}
+install -m 755 src/%{name} %{buildroot}%{_gamesbindir}
 
 #data dir
 install -d -m 755 %{buildroot}%{_gamesdatadir}/%{name}
@@ -63,14 +74,4 @@ Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-MoreApplications-Emulators;Emulator;Game;GTK;
 EOF
-
-%files
-%doc ChangeLog COPYING* README
-%attr(0755,root,games) %{_gamesbindir}/%{name}
-%dir %attr(0755,root,games) %{_gamesdatadir}/%{name}
-%{_datadir}/applications/mandriva-%{name}.desktop
-%{_miconsdir}/%{name}.png
-%{_iconsdir}/%{name}.png
-%{_liconsdir}/%{name}.png
-
 
