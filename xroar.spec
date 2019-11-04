@@ -1,7 +1,7 @@
 Summary:	Dragon32, Dragon64 and Tandy CoCo emulator
 Name:		xroar
-Version:	0.30
-Release:	2
+Version:	0.35.4
+Release:	1
 License:	GPLv2+
 Group:		Emulators
 Url:		http://www.6809.org.uk/dragon/xroar.shtml
@@ -41,9 +41,9 @@ support).
 
 %build
 export LDLIBS="-lm"
-%configure2_5x
+%configure
 perl -pi -e "s#share#share/games#g" Makefile
-%make
+%make_build
 
 %install
 #binary
