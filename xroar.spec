@@ -12,6 +12,7 @@ Source3:	%{name}-48.png
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:  pkgconfig(dri)
 BuildRequires:	pkgconfig(gl)
+BuildRequires:  pkgconfig(libglvnd)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(jack)
