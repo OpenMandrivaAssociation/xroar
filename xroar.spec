@@ -10,13 +10,14 @@ Source1:	%{name}-16.png
 Source2:	%{name}-32.png
 Source3:	%{name}-48.png
 BuildRequires:	pkgconfig(alsa)
+BuildRequires:  pkgconfig(dri)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(jack)
 BuildRequires:	pkgconfig(libpulse)
-BuildRequires:	pkgconfig(sdl)
-BuildRequires:	pkgconfig(SDL_image)
+BuildRequires:	pkgconfig(sdl2)
+BuildRequires:	pkgconfig(SDL2_image)
 BuildRequires:	pkgconfig(sndfile)
 
 %description
