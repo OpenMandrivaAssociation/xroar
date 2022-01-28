@@ -1,6 +1,6 @@
 Summary:	Dragon32, Dragon64 and Tandy CoCo emulator
 Name:		xroar
-Version:	1.0.7
+Version:	1.0.9
 Release:	1
 License:	GPLv2+
 Group:		Emulators
