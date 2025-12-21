@@ -9,6 +9,11 @@ Source0:	https://www.6809.org.uk/dragon/%{name}-%{version}.tar.gz
 Source1:	%{name}-16.png
 Source2:	%{name}-32.png
 Source3:	%{name}-48.png
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:  pkgconfig(dri)
 BuildRequires:	pkgconfig(gl)
